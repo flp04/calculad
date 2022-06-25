@@ -1,5 +1,5 @@
 <?php
 
-    $nome = $_POST["nome"];
-    echo "hello world " . $nome
+    //$nome = $_POST["nome"];
+    echo "hello world " //. $nome
     ?>
