@@ -3,4 +3,8 @@ h1{
 }
 h2{
     text-align: right;
+    color: white;
+}
+#titulo{
+    background-color: black;
 }
