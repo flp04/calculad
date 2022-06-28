@@ -1,5 +1,4 @@
-alert("Para reiniciar toque no display")
-
+alert(8)
 //variavel que recebe o elemento html display
 var display = document.querySelector("#display")
 //variaveis para armazenar os numeros e operação a ser realizada
@@ -42,7 +41,10 @@ function resultado(){
 }
 //limpa o display e zera as operacões
 function limpar(){
-   // prompt("uai")
     display.innerHTML = 0
     operador = 0
+}
+//apaga o ultimo caracter do display
+function apagar(){
+    display.innerHTML = display.innerHTML.substring(0, display.innerHTML.length -1)
 }
