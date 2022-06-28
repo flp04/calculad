@@ -1,0 +1,18 @@
+img{
+    width: 20%;
+    float: left;
+}
+h1{
+    text-align: center;
+    color: yellow;
+}
+h2{
+    text-align: right;
+    color: white;
+}
+#titulo{
+    background-color: black;
+}
+section{
+    
+}
