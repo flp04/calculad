@@ -17,25 +17,46 @@ function insert(num){
 //função que atribui o operador, o primeiro numeral  e zera o display para receber o segundo
 function math(op){
     operacao = op
-    operador1 = display.innerHTML
+    numero1 = display.innerHTML
     display.innerHTML = 0
 }
 //atribui o segundo numeral, realiza a operação conforme a variavel e mostra o resultado no display
 function resultado(){
-    operador2 = display.innerHTML
+    numero2 = display.innerHTML
     switch(operacao){
         case "somar":
-            display.innerHTML = parseFloat(operador1) + parseFloat(operador2)
+            display.innerHTML = parseFloat(numero1) + parseFloat(numero2)
             break
         case "subtrair":
-            display.innerHTML = parseFloat(operador1) - parseFloat(operador2)
+            display.innerHTML = parseFloat(numero1) - parseFloat(operador2)
             break
         case "multiplicar":
-            display.innerHTML = parseFloat(operador1) * parseFloat(operador2)
+            display.innerHTML = parseFloat(numero1) * parseFloat(numero2)
             break
         case "dividir":
-            display.innerHTML = parseFloat(operador1) / parseFloat(operador2)
+            display.innerHTML = parseFloat(numero1) / parseFloat(numero2)
             break
+    }
+}
+function porcento(){
+    if(numero1 == 0){
+        alert("utilize o % no lugar do =")
+    }else{
+        numero2 = (parseFloat(numero1)/100)*parseFloat(display.innerHTML)
+     switch(operacao){
+        case "somar":
+            display.innerHTML = parseFloat(numero1) + parseFloat(numero2)
+            break
+        case "subtrair":
+            display.innerHTML = parseFloat(numero1) - parseFloat(operador2)
+            break
+        case "multiplicar":
+            display.innerHTML = (numero2)
+            break
+        case "dividir":
+            display.innerHTML = (numero2)
+            break
+     }
     }
 }
 //limpa o display e zera as operacões
