@@ -1,4 +1,3 @@
-alert(8)
 //variavel que recebe o elemento html display
 var display = document.querySelector("#display")
 //variaveis para armazenar os numeros e operação a ser realizada
