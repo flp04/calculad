@@ -1,4 +1,4 @@
-prompt("Para reiniciar toque no display")
+alert("Para reiniciar toque no display")
 
 //variavel que recebe o elemento html display
 var display = document.querySelector("#display")
