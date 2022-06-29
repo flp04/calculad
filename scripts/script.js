@@ -69,7 +69,12 @@ function limpar(){
     display2.innerHTML = ''
     operador = 0
 }
-//apaga o ultimo caracter do display
+//apaga o ultimo caracter do display, com a condição de se existir apenas um caracter, atribuir o número zero
 function apagar(){
-    display.innerHTML = display.innerHTML.substring(0, display.innerHTML.length -1)
+    console.log(display.innerHTML.length)
+    if(display.innerHTML.length == 1){
+        display.innerHTML = 0
+    }else{
+        display.innerHTML = display.innerHTML.substring(0, display.innerHTML.length -1)
+    }
 }
