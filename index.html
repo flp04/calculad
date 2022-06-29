@@ -11,6 +11,7 @@
     <table id="calculadora">
         <tr>
             <td>
+                <div id="display2"></div>
                 <div id="display" onClick="limpar()">0</div>
             </td>
         </tr>
@@ -19,7 +20,7 @@
                 <button onClick="apagar()">C</button>
                 <button onClick="limpar()">AC</button>
                 <button onClick="porcento()">%</button>
-                <button onClick="math('somar')">+</button>
+                <button onClick="math(this)">+</button>
             </td>
         </tr>
         <tr>
@@ -27,7 +28,7 @@
                 <button onClick="insert(1)">1</button>
                 <button onClick="insert(2)">2</button>
                 <button onClick="insert(3)">3</button>
-                <button onClick="math('subtrair')">-</button>
+                <button onClick="math(this)">-</button>
             </td>
         </tr>
         <tr>
@@ -35,7 +36,7 @@
                 <button onClick="insert(4)">4</button>
                 <button onClick="insert(5)">5</button>
                 <button onClick="insert(6)">6</button>
-                <button onClick="math('multiplicar')">x</button>
+                <button onClick="math(this)">*</button>
             </td>
         </tr>
         <tr>
@@ -43,14 +44,14 @@
                 <button onClick="insert(7)">7</button>
                 <button onClick="insert(8)">8</button>
                 <button onClick="insert(9)">9</button>
-                <button onClick="math('dividir')">/</button>
+                <button onClick="math(this)">/</button>
             </td>
         </tr>
         <tr>
             <td>
                 <button onClick="insert('.')">.</button>
                 <button onClick="insert(0)">0</button>
-                <button style="width:84px" onClick="resultado()">=</button>
+                <button style="width:104px" onClick="resultado()">=</button>
             </td>
         </tr>
     </table>

@@ -1,5 +1,6 @@
-//variavel que recebe o elemento html display
+//variavel que recebe o elemento html display e display2
 var display = document.querySelector("#display")
+var display2 = document.querySelector("#display2")
 //variaveis para armazenar os numeros e operação a ser realizada
 var numero1 = 0
 var numero2 = 0
@@ -16,25 +17,27 @@ function insert(num){
 }
 //função que atribui o operador, o primeiro numeral  e zera o display para receber o segundo
 function math(op){
-    operacao = op
-    numero1 = display.innerHTML
+    operacao = op.innerHTML
+    numero1 = parseFloat(display.innerHTML)
+    display2.innerHTML = numero1 + " " + operacao
     display.innerHTML = 0
 }
 //atribui o segundo numeral, realiza a operação conforme a variavel e mostra o resultado no display
 function resultado(){
-    numero2 = display.innerHTML
+    numero2 = parseFloat(display.innerHTML)
+    display2.innerHTML += " " + numero2 + " ="
     switch(operacao){
-        case "somar":
-            display.innerHTML = parseFloat(numero1) + parseFloat(numero2)
+        case "+":
+            display.innerHTML = numero1 + numero2
             break
-        case "subtrair":
-            display.innerHTML = parseFloat(numero1) - parseFloat(operador2)
+        case "-":
+            display.innerHTML = numero1 - numero2
             break
-        case "multiplicar":
-            display.innerHTML = parseFloat(numero1) * parseFloat(numero2)
+        case "*":
+            display.innerHTML = numero1 * numero2
             break
-        case "dividir":
-            display.innerHTML = parseFloat(numero1) / parseFloat(numero2)
+        case "/":
+            display.innerHTML = numero1 / numero2
             break
     }
 }
@@ -42,19 +45,20 @@ function porcento(){
     if(numero1 == 0){
         alert("utilize o % no lugar do =")
     }else{
-        numero2 = (parseFloat(numero1)/100)*parseFloat(display.innerHTML)
+        numero2 = (numero1/100)*display.innerHTML
+        display2.innerHTML += " " + display.innerHTML + "% ="
      switch(operacao){
-        case "somar":
-            display.innerHTML = parseFloat(numero1) + parseFloat(numero2)
+        case "+":
+            display.innerHTML = numero1 + numero2
             break
-        case "subtrair":
-            display.innerHTML = parseFloat(numero1) - parseFloat(operador2)
+        case "-":
+            display.innerHTML = numero1 - numero2
             break
-        case "multiplicar":
-            display.innerHTML = (numero2)
+        case "*":
+            display.innerHTML = numero2
             break
-        case "dividir":
-            display.innerHTML = (numero2)
+        case "/":
+            display.innerHTML = numero2
             break
      }
     }
@@ -62,6 +66,7 @@ function porcento(){
 //limpa o display e zera as operacões
 function limpar(){
     display.innerHTML = 0
+    display2.innerHTML = ''
     operador = 0
 }
 //apaga o ultimo caracter do display
